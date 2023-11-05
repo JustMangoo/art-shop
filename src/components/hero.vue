@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img src="src/assets/images/placeholder.jpg" />
+    <img src="../assets/images/placeholder.jpg" />
   </header>
 </template>
 
