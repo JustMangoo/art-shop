@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/*---------color palette---------*/
+
+:root {
+  --neutral-one: #f5f5f5;
+  --neutral-two: #171717;
+  --primary: #abb491;
+  --secondary: #ebeee3;
+}
+
+/*---------Setup---------*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--neutral-two);
+  background: var(--neutral-one);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+}
+
+h2 {
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/*---------navBar---------*/
+
+.navBar {
+  width: 100%;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  transform: translated3d(0, 0, 0);
+  transition: 0.1s all ease-out;
+}
+
+.navBar.navBar--hidden {
+  box-shadow: none;
+  transform: translate3d(0, -100%, 0);
+}
+
+.navBar .containerTop {
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  width: 100%;
+}
+
+.navBar .socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  justify-self: flex-start;
+  gap: 1rem;
+  flex: 2 0 0;
+  color: var(--neutral-one);
+}
+
+.navBar .socials img {
+  height: 1.2rem;
+  color: var(--neutral-one);
+}
+
+.navBar .logo {
+  background-color: var(--neutral-one);
+  height: 1rem;
+  flex: 1 1 auto;
+}
+
+.navBar .languageCurrency {
+  flex: 2 0 0;
+  color: var(--neutral-one);
+  text-align: right;
+  justify-self: flex-end;
+}
+
+.navBar .containerBot {
+  background: var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+.navBar .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navBar .account-cart {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navBar .account-cart a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.navBar .account-cart span {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" -25, "opsz" 20;
+  color: var(--neutral-two);
+  font-size: 2rem;
+}
+
+/*---------Hero---------*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fill;
+  max-height: 75vh;
+  overflow: hidden;
+}
+
+header img {
+  height: fit;
+}
+
+@media only screen and (min-width: 1250px) {
+  header img {
+    width: 100%;
+  }
+}
