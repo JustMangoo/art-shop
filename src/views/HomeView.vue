@@ -14,3 +14,6 @@ export default {
   components: { Navigation, Hero },
 };
 </script>
+
+<style>
+</style>

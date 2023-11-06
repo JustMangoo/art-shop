@@ -47,20 +47,6 @@ a:hover {
 
 /*---------Hero---------*/
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: fit;
-  max-height: 75vh;
-  overflow: hidden;
-}
-
-header img {
-  height: fit;
-}
-
 @media only screen and (min-width: 1250px) {
   header img {
     width: 100%;

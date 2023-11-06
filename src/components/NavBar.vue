@@ -65,21 +65,15 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .navBar {
   width: 100%;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
   position: fixed;
   transform: translated3d(0, 0, 0);
   transition: 0.1s all ease-out;
-}
 
-.navBar.navBar--hidden {
-  box-shadow: none;
-  transform: translate3d(0, -100%, 0);
-}
-
-.navBar .containerTop {
+  .containerTop {
   background: var(--primary);
   display: flex;
   justify-content: space-between;
@@ -89,71 +83,79 @@ export default {
   width: 100%;
 }
 
-.navBar .socials {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
-  justify-self: flex-start;
-  gap: 1rem;
-  flex: 2 0 0;
-  color: var(--neutral-one);
+  .socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    justify-self: flex-start;
+    gap: 1rem;
+    flex: 2 0 0;
+    color: var(--neutral-one);
+  }
+
+  .socials img {
+    height: 1.2rem;
+    color: var(--neutral-one);
+  }
+
+  .logo {
+    background-color: var(--neutral-one);
+    height: 1rem;
+    flex: 1 1 auto;
+  }
+
+  .languageCurrency {
+    flex: 2 0 0;
+    color: var(--neutral-one);
+    text-align: right;
+    justify-self: flex-end;
+  }
+
+  .containerBot {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .account-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .account-cart a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+
+  .account-cart span {
+    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" -25, "opsz" 20;
+    color: var(--neutral-two);
+    font-size: 2rem;
+  }
 }
 
-.navBar .socials img {
-  height: 1.2rem;
-  color: var(--neutral-one);
+.navBar.navBar--hidden {
+  box-shadow: none;
+  transform: translate3d(0, -100%, 0);
 }
 
-.navBar .logo {
-  background-color: var(--neutral-one);
-  height: 1rem;
-  flex: 1 1 auto;
-}
 
-.navBar .languageCurrency {
-  flex: 2 0 0;
-  color: var(--neutral-one);
-  text-align: right;
-  justify-self: flex-end;
-}
-
-.navBar .containerBot {
-  background-color: var(--secondary);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  width: 100%;
-}
-
-.navBar .links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.navBar .account-cart {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.navBar .account-cart a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0.2rem;
-}
-
-.navBar .account-cart span {
-  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" -25, "opsz" 20;
-  color: var(--neutral-two);
-  font-size: 2rem;
-}
 </style>

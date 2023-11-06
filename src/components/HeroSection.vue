@@ -20,4 +20,18 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped> 
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit;
+  max-height: 75vh;
+  overflow: hidden;
+
+  img {
+    height: fit;
+  }
+}
+</style>
