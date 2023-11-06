@@ -1,5 +1,5 @@
 <template>
-  <div class="navBar" :class="{ 'navBar--hidden': !showNavbar }">
+  <nav :class="{ 'navBar--hidden': !showNavbar }">
     <div class="containerTop">
       <div class="socials">
         <img src="../assets/icons/facebook.svg" />
@@ -23,11 +23,13 @@
         >
         <a
           ><p>Grozs</p>
-          <span class="material-symbols-sharp"> shopping_bag </span></a
+          <span class="material-symbols-outlined">
+account_circle
+</span></a
         >
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>
@@ -41,7 +43,6 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
-    console.log("created");
   },
   beforeUnmount() {
     window.removeEventListener("scroll", this.onScroll);
@@ -66,10 +67,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navBar {
+nav {
   width: 100%;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
-  position: fixed;
+  position: relative;
   transform: translated3d(0, 0, 0);
   transition: 0.1s all ease-out;
 

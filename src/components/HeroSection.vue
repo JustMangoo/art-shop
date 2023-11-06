@@ -15,7 +15,7 @@ import Carousel from "./CarouselComp.vue"
 import Slide from "./SlideComp.vue";
 
 export default {
-  name: "heroSection",
+  name: "HeroSection",
   components: { Carousel, Slide },
 };
 </script>
@@ -26,12 +26,18 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: fit;
-  max-height: 75vh;
+  width: 100%;
+  max-height: 65vh;
   overflow: hidden;
 
   img {
-    height: fit;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  header img {
+    height: 100%;
   }
 }
 </style>

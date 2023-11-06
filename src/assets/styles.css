@@ -32,23 +32,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-}
-
-h2 {
-}
-
 a:hover {
   cursor: pointer;
 }
 
-/*---------navBar---------*/
-
-
-/*---------Hero---------*/
-
-@media only screen and (min-width: 1250px) {
-  header img {
-    width: 100%;
-  }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 100,
+  'GRAD' -25,
+  'opsz' 20
 }

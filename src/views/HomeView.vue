@@ -10,10 +10,13 @@ import Hero from "../components/HeroSection.vue";
 
 
 export default {
-  name: "homeView",
+  name: "HomeView",
   components: { Navigation, Hero },
 };
 </script>
 
 <style>
+  body {
+    position: relative;
+  }
 </style>
