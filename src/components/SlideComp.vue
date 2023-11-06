@@ -1,15 +1,16 @@
 <template>
-  <div>
-    <!-- Your HTML code here -->
+  <div class="slide">
+    <transition name="slide">
+      <slot />
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
-  // Your script here
 }
 </script>
 
 <style scoped>
-/* Your styles here */
+  
 </style>
