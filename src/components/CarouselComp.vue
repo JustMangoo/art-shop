@@ -16,6 +16,7 @@
   <!-- Pagination -->
   <div class="pagination">
     <span
+      @click="goToSlide(index)"
       v-for="(slide, index) in getSlideCount"
       :key="index"
       :class="{ active: index + 1 === currentSlide }"
@@ -29,7 +30,7 @@ import { ref, onMounted } from "vue";
 
 export default {
   setup() {
-    const currentSlide = ref(2);
+    const currentSlide = ref(1);
     const getSlideCount = ref(null);
 
     //next slide
@@ -50,13 +51,15 @@ export default {
       currentSlide.value -= 1;
     };
 
-    goToSlide = () => {};
+    const goToSlide = (index) => {
+      currentSlide.value = index + 1;
+    };
 
     onMounted(() => {
       getSlideCount.value = document.querySelectorAll(".slide").length;
     });
 
-    return { currentSlide, nextSlide, prevSlide, getSlideCount };
+    return { currentSlide, nextSlide, prevSlide, getSlideCount, goToSlide };
   },
 };
 </script>
@@ -92,7 +95,7 @@ export default {
     justify-content: center;
   }
   ion-icon:hover {
-    opacity: 80%;
+    opacity: 90%;
   }
 }
 
@@ -104,7 +107,6 @@ export default {
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  opacity: 60%;
 
   span {
     cursor: pointer;
@@ -113,14 +115,15 @@ export default {
     border: 2px solid var(--neutral-one);
     border-radius: 50%;
     box-shadow: 0px 0px 78px 0px rgba(0, 0, 0, 1);
+    opacity: 60%;
+  }
+
+  span:hover {
+    opacity: 90%;
   }
 
   .active {
     background-color: var(--neutral-one);
   }
-}
-
-.pagination:hover {
-  opacity: 90%;
 }
 </style>
