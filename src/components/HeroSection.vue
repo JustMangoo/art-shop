@@ -1,9 +1,9 @@
 <template>
   <header>
-    <Carousel>
-      <Slide>
-        <div>
-          <img src="../assets/images/hero-1.jpg" alt="">
+    <Carousel class="carousel" v-slot="{ currentSlide}">
+      <Slide v-for="(slide, index) in carouselSlides" :key="index">
+        <div v-show="currentSlide === index + 1" class="slide-info">
+          <img :src="require(`@/assets/images/${slide}.jpg`)">
         </div>
       </Slide>
     </Carousel>
@@ -15,29 +15,37 @@ import Carousel from "./CarouselComp.vue"
 import Slide from "./SlideComp.vue";
 
 export default {
-  name: "HeroSection",
   components: { Carousel, Slide },
+  setup() {
+    const carouselSlides = ['hero-1', 'hero-2', 'hero-3'];
+
+    return { carouselSlides};
+  },
 };
 </script>
 
 <style lang="scss" scoped> 
 header {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-height: 65vh;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 1250px) {
-  header img {
+  position: relative;
+  height: 65vh;
+  .carousel{
+    position: relative;
     height: 100%;
+    overflow: hidden;
+    .slide-info {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }
 </style>

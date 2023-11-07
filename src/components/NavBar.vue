@@ -2,9 +2,9 @@
   <nav :class="{ 'navBar--hidden': !showNavbar }">
     <div class="containerTop">
       <div class="socials">
-        <img src="../assets/icons/facebook.svg" />
-        <img src="../assets/icons/instagram.svg" />
-        <img src="../assets/icons/tik-tok.svg" />
+        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon name="logo-tiktok"></ion-icon>
+        <ion-icon name="logo-instagram"></ion-icon>
       </div>
       <div class="logo"></div>
       <div class="languageCurrency">Latvia (EUR)</div>
@@ -19,13 +19,11 @@
       <div class="account-cart">
         <a
           ><p>Pieslēgties</p>
-          <span class="material-symbols-sharp"> account_circle </span></a
+          <ion-icon name="person-outline"></ion-icon></a
         >
         <a
           ><p>Grozs</p>
-          <span class="material-symbols-outlined">
-account_circle
-</span></a
+          <ion-icon name="bag-outline"></ion-icon></a
         >
       </div>
     </div>
@@ -34,7 +32,6 @@ account_circle
 
 <script>
 export default {
-  name: "navigationSection",
   data() {
     return {
       showNavbar: true,
@@ -70,9 +67,10 @@ export default {
 nav {
   width: 100%;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
-  position: relative;
+  position: sticky;
   transform: translated3d(0, 0, 0);
   transition: 0.1s all ease-out;
+  z-index: 100;
 
   .containerTop {
   background: var(--primary);
@@ -118,7 +116,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 2.2rem 2rem;
     width: 100%;
   }
 
@@ -144,19 +142,27 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 0.2rem;
+    color: var(--neutral-two);
+
+    ion-icon {
+      --ionicon-stroke-width: 1.5rem;
+    }
   }
 
-  .account-cart span {
-    font-variation-settings: "FILL" 0, "wght" 200, "GRAD" -25, "opsz" 20;
-    color: var(--neutral-two);
-    font-size: 2rem;
-  }
+  
+
+
 }
 
-.navBar.navBar--hidden {
+
+nav.navBar--hidden {
   box-shadow: none;
   transform: translate3d(0, -100%, 0);
 }
 
-
+@media only screen and (max-width: 900px) {
+  nav .containerBot{
+    display: none;
+  }
+}
 </style>

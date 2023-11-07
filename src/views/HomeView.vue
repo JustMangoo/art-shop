@@ -16,7 +16,4 @@ export default {
 </script>
 
 <style>
-  body {
-    position: relative;
-  }
 </style>
