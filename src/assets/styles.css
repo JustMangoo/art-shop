@@ -24,7 +24,7 @@ body {
   color: var(--neutral-two);
   background: var(--neutral-one);
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 300;
   font-style: normal;
   text-rendering: optimizeLegibility;
@@ -37,9 +37,5 @@ a:hover {
 }
 
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 1,
-  'wght' 100,
-  'GRAD' -25,
-  'opsz' 20
+  font-variation-settings: "FILL" 1, "wght" 100, "GRAD" -25, "opsz" 20;
 }
