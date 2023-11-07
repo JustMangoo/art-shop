@@ -15,11 +15,17 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 export default {
   setup() {
     const currentSlide = ref(2);
+    const getSlideCount =ref(null);
+
+    onMounted(() => {
+      getSlideCount.value = document.querySelectorAll(".slide").length;
+      console.log(getSlideCount.value);
+    })
 
     return {currentSlide};     
   }
@@ -52,6 +58,10 @@ export default {
     background-color: var(--neutral-two);
     opacity: 30%;
     border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
