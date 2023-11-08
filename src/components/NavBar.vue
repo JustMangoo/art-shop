@@ -4,10 +4,12 @@
       <div class="socials">
         <ion-icon name="logo-facebook"></ion-icon>
         <ion-icon name="logo-tiktok"></ion-icon>
-        <a href="https://www.instagram.com/artis.daugats.art/"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="https://www.instagram.com/artis.daugats.art/"
+          ><ion-icon name="logo-instagram"></ion-icon
+        ></a>
       </div>
       <div class="logo">
-        <img src="../assets/images/Logo placeholder.png" alt="">
+        <img src="../assets/images/Logo placeholder.png" alt="" />
       </div>
       <div class="languageCurrency">Latvia (EUR)</div>
     </div>
@@ -21,12 +23,12 @@
       <div class="account-cart">
         <a
           ><p>Pieslēgties</p>
-          <ion-icon name="person-outline"></ion-icon></a
-        >
+          <ion-icon name="person-outline"></ion-icon
+        ></a>
         <a
           ><p>Grozs</p>
-          <ion-icon name="bag-outline"></ion-icon></a
-        >
+          <ion-icon name="bag-outline"></ion-icon
+        ></a>
       </div>
     </div>
   </nav>
@@ -69,20 +71,20 @@ export default {
 nav {
   width: 100%;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
-  position: sticky;
+  position: fixed;
   transform: translated3d(0, 0, 0);
   transition: 0.1s all ease-out;
   z-index: 100;
 
   .containerTop {
-  background: var(--primary);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 500;
-  padding: 0.5rem 3rem;
-  width: 100%;
-}
+    background: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    padding: 0.5rem 3rem;
+    width: 100%;
+  }
 
   .socials {
     display: flex;
@@ -118,9 +120,7 @@ nav {
     text-align: right;
     justify-self: flex-end;
   }
-
-
-  }
+}
 .containerBot {
   background-color: var(--secondary);
   display: flex;
@@ -156,12 +156,7 @@ nav {
       --ionicon-stroke-width: 1.5rem;
     }
   }
-
-  
-
-
 }
-
 
 nav.navBar--hidden {
   box-shadow: none;
@@ -169,10 +164,10 @@ nav.navBar--hidden {
 }
 
 @media only screen and (max-width: 900px) {
-  nav .containerBot{
+  nav .containerBot {
     display: none;
   }
-  nav .socials{
+  nav .socials {
     display: none;
   }
 }
