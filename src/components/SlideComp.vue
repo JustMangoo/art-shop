@@ -1,9 +1,7 @@
 <template>
   <div class="slide">
-    <transition name="slide" v-show="true">
-      <div v-if="true">
+    <transition name="slide">
         <slot />
-      </div>
     </transition>
   </div>
 </template>
@@ -15,16 +13,29 @@ export default {};
 <style lang="scss">
 .slide-enter-active,
 .slide-leave-active {
-  transition: opacity 0.7 ease-in-out;
+  transition:1.5s ease-in-out;
 }
 
-.slide-enter-from,
-.slide-leave-to {
+.slide-enter-from {
+  transform: translate(0, -100%);
   opacity: 0;
 }
 
-.slide-enter-to,
+.slide-enter-to{
+  transform: translate(0, 0);
+  z-index: 1;
+  opacity: 100%;
+}
+
 .slide-leave-from {
-  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.slide-leave-to {
+  z-index: 0;
+}
+
+.slide{
+  overflow:hidden ;
 }
 </style>

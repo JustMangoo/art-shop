@@ -24,7 +24,7 @@ body {
   color: var(--neutral-two);
   background: var(--neutral-one);
   font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 300;
   font-style: normal;
   text-rendering: optimizeLegibility;
@@ -34,6 +34,16 @@ body {
 
 a:hover {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
 }
 
 .material-symbols-outlined {

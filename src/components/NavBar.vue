@@ -4,9 +4,11 @@
       <div class="socials">
         <ion-icon name="logo-facebook"></ion-icon>
         <ion-icon name="logo-tiktok"></ion-icon>
-        <ion-icon name="logo-instagram"></ion-icon>
+        <a href="https://www.instagram.com/artis.daugats.art/"><ion-icon name="logo-instagram"></ion-icon></a>
       </div>
-      <div class="logo"></div>
+      <div class="logo">
+        <img src="../assets/images/Logo placeholder.png" alt="">
+      </div>
       <div class="languageCurrency">Latvia (EUR)</div>
     </div>
     <div class="containerBot">
@@ -76,9 +78,9 @@ nav {
   background: var(--primary);
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   font-weight: 500;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 3rem;
   width: 100%;
 }
 
@@ -87,7 +89,7 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    justify-self: flex-start;
+    justify-self: center;
     gap: 1rem;
     flex: 2 0 0;
     color: var(--neutral-one);
@@ -99,9 +101,15 @@ nav {
   }
 
   .logo {
-    background-color: var(--neutral-one);
-    height: 1rem;
+    height: 3rem;
     flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 100%;
+    }
   }
 
   .languageCurrency {
@@ -111,15 +119,15 @@ nav {
     justify-self: flex-end;
   }
 
-  .containerBot {
-    background-color: var(--secondary);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2.2rem 2rem;
-    width: 100%;
-  }
 
+  }
+.containerBot {
+  background-color: var(--secondary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.2rem 3rem;
+  width: 100%;
   .links {
     display: flex;
     flex-direction: row;
@@ -162,6 +170,9 @@ nav.navBar--hidden {
 
 @media only screen and (max-width: 900px) {
   nav .containerBot{
+    display: none;
+  }
+  nav .socials{
     display: none;
   }
 }

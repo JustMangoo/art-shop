@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .controls {
   padding: 0 1rem;
   height: 100%;
@@ -85,6 +85,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 
   .toggle-page {
     display: flex;
@@ -119,6 +120,7 @@ export default {
   gap: 1rem;
   justify-content: center;
   align-items: center;
+  z-index: 11;
 
   span {
     cursor: pointer;
