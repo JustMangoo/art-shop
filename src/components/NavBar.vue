@@ -71,7 +71,8 @@ export default {
 nav {
   width: 100%;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
-  position: fixed;
+  position: sticky;
+  top: 0;
   transform: translated3d(0, 0, 0);
   transition: 0.1s all ease-out;
   z-index: 100;
