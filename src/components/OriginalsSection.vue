@@ -27,7 +27,6 @@
 
         .container {
             position: relative;
-            border: 2px solid red;
             width: 80rem;
             max-width: 90%;
             height: 50rem;
@@ -40,7 +39,7 @@
             .accent {
                 position: absolute;
                 width: 90%;
-                height: 35rem;
+                height: 30rem;
                 max-height: 90rem;
                 background-color: var(--primary);
             }
@@ -55,17 +54,17 @@
             }
 
             .left {
-                height: 21vh;
+                height: 35vh;
                 left: 0;
                 top:0;
-                aspect-ratio: 4/5;
+                aspect-ratio: 4 / 3;
             }
 
             .right {
                 height: 40vh;
-                right: 10%;
+                right: 9%;
                 bottom: 0;
-                aspect-ratio: 3/4;
+                aspect-ratio: 3 / 4;
             }
         }
     }
