@@ -19,7 +19,6 @@ export default {};
   align-items: center;
   flex-direction: column;
   width: 100%;
-  border: 2px solid black;
 
   .container {
     position: relative;
@@ -48,14 +47,14 @@ export default {};
     }
 
     .left {
-      height: 55vh;
+      height: 65%;
       left: 0;
       top: 0;
       aspect-ratio: 4 / 3;
     }
 
     .right {
-      height: 60vh;
+      height: 70%;
       right: 9%;
       bottom: 0;
       aspect-ratio: 3 / 4;
