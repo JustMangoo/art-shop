@@ -2,11 +2,15 @@
   <nav :class="{ 'navBar--hidden': !showNavbar }">
     <div class="containerTop">
       <div class="socials">
-        <ion-icon name="logo-facebook"></ion-icon>
-        <ion-icon name="logo-tiktok"></ion-icon>
+        <a href="https://www.facebook.com/profile.php?id=100007068168349"
+          ><ion-icon name="logo-facebook"></ion-icon>
+        </a>
         <a href="https://www.instagram.com/artis.daugats.art/"
-          ><ion-icon name="logo-instagram"></ion-icon
-        ></a>
+          ><ion-icon name="logo-tiktok"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/artis.daugats.art/"
+          ><ion-icon name="logo-instagram"></ion-icon>
+        </a>
       </div>
       <div class="logo">
         <img src="../assets/images/Logo placeholder.png" alt="" />
@@ -95,11 +99,6 @@ nav {
     justify-self: center;
     gap: 1rem;
     flex: 2 0 0;
-    color: var(--neutral-one);
-  }
-
-  .socials img {
-    height: 1.2rem;
     color: var(--neutral-one);
   }
 
