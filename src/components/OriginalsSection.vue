@@ -36,6 +36,7 @@ export default {};
       height: 30rem;
       max-height: 90rem;
       background-color: var(--primary);
+      border-radius: 0.3rem;
     }
     img {
       position: absolute;

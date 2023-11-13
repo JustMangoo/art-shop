@@ -17,12 +17,10 @@ export default {};
 }
 
 .slide-enter-from {
-  transform: translate(0, -100%);
   opacity: 0;
 }
 
 .slide-enter-to{
-  transform: translate(0, 0);
   z-index: 1;
   opacity: 100%;
 }

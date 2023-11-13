@@ -126,7 +126,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2.2rem 3rem;
+  padding: 1.5rem 3rem;
   width: 100%;
   .links {
     display: flex;

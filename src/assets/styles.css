@@ -24,7 +24,7 @@ body {
   color: var(--neutral-two);
   background: var(--neutral-one);
   font-family: "Oxygen", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
   font-style: normal;
   text-rendering: optimizeLegibility;
