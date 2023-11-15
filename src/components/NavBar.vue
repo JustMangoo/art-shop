@@ -155,7 +155,7 @@ nav {
     color: var(--neutral-two);
 
     ion-icon {
-      --ionicon-stroke-width: 1.5rem;
+      --ionicon-stroke-width: 2rem;
     }
   }
 }

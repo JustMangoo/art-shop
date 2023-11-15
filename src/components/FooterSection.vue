@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss">
 footer {
-  background-color: var(--primary);
+  background-color: var(--secondary);
   padding: 20px;
   color: #333;
   display: flex;
@@ -93,27 +93,45 @@ footer {
     margin-bottom: 15px;
   }
 
-  input[type="text"], input[type="email"], textarea {
+  input, textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 0.3rem;
+    border: none;
+    border-bottom: 2px solid var(--primary);
+    border-radius: 0.2rem;
     margin-bottom: 10px;
+    background-color: var(--neutral-one);
+    color: var(--neutral-two);
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+  }
+
+  textarea {
+   resize: none;
+  }
+
+  ::placeholder {
+  color:  var(--neutral-two);
+  opacity: 0.7; /* Firefox */
+  font-weight: 500;
   }
 
   button {
     background-color: transparent;
-    color: var(--secondary);
-    border: 2px solid var(--secondary);
-    padding: 10px 20px;
-    border-radius: 0.3rem;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 0.5rem 2rem;
+    border-radius: 0.2rem;
     cursor: pointer;
-    width: 100%;
+    width:  50%;
     font-weight: 600;
   }
 
   button:hover {
-    background-color: var(--secondary)
+    background-color: var(--primary);
+    color: var(--neutral-two);
   }
 
   .socials {
@@ -127,11 +145,12 @@ footer {
     a {
       width: 3rem;
       height: 3rem;
-      background-color: var(--secondary);
-      border-radius: 50%;;
+      background-color: var(--primary);
+      border-radius: 50%;
 
       ion-icon {
-            font-size: 1.6rem;
+            font-size: 2rem;
+            color: var(--neutral-two);
           }
     }
   }

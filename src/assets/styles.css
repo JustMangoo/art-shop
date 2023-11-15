@@ -4,7 +4,7 @@
 
 :root {
   --neutral-one: #f5f5f5;
-  --neutral-two: #171717;
+  --neutral-two: #4e4e4e;
   --primary: #abb491;
   --secondary: #ebeee3;
 }
@@ -17,20 +17,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Oxygen", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body {
   min-height: 100vh;
   color: var(--neutral-two);
   background: var(--neutral-one);
-  font-family: "Oxygen", sans-serif;
-  font-size: 1rem;
-  font-weight: 300;
-  font-style: normal;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
 
 h1 {
   font-family: "Cormorant Garamond", serif;
