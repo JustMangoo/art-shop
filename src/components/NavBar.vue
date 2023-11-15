@@ -44,12 +44,12 @@ export default {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
-      height: ''
+      height: "",
     };
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
-    this.height = this.$refs.navBar.offsetHeight
+    this.height = this.$refs.navBar.offsetHeight;
   },
   beforeUnmount() {
     window.removeEventListener("scroll", this.onScroll);
@@ -76,7 +76,7 @@ export default {
 <style lang="scss" scoped>
 nav {
   width: 100%;
-  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
   transform: translated3d(0, 0, 0);
