@@ -77,6 +77,8 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    
   }
 
   .form, .contacts, .socials {
@@ -87,51 +89,52 @@ footer {
 
   .form {
     border-radius: 5px;
-  }
 
-  .form form div {
-    margin-bottom: 15px;
-  }
+    .form form div {
+      margin-bottom: 15px;
+    }
 
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-bottom: 2px solid var(--primary);
-    border-radius: 0.2rem;
-    margin-bottom: 10px;
-    background-color: var(--neutral-one);
-    color: var(--neutral-two);
-  }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid var(--primary);
+      border-radius: 0.2rem;
+      margin-bottom: 10px;
+      background-color: var(--neutral-one);
+      color: var(--neutral-two);
+      outline: none;
+    }
 
-  input:focus, textarea:focus {
-    outline: none;
-  }
+    input:focus, textarea:focus {
+      outline: 2px solid var(--primary);
+    }
 
-  textarea {
-   resize: none;
-  }
+    textarea {
+      resize: none;
+    }
 
-  ::placeholder {
-  color:  var(--neutral-two);
-  opacity: 0.7; /* Firefox */
-  font-weight: 500;
-  }
+    ::placeholder {
+      color:  var(--neutral-two);
+      opacity: 0.7;
+      font-weight: 500;
+    }
 
-  button {
-    background-color: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
-    padding: 0.5rem 2rem;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    width:  50%;
-    font-weight: 600;
-  }
+    button {
+      background-color: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      padding: 0.5rem 2rem;
+      border-radius: 0.2rem;
+      cursor: pointer;
+      width:  50%;
+      font-weight: 600;
+    }
 
-  button:hover {
-    background-color: var(--primary);
-    color: var(--neutral-two);
+    button:hover {
+      background-color: var(--primary);
+      color: var(--neutral-two);
+    }
   }
 
   .socials {
@@ -153,10 +156,10 @@ footer {
             color: var(--neutral-two);
           }
     }
-  }
 
-  .socials a:hover {
-    transform: scale(1.1);
+    a:hover {
+      transform: scale(1.1);
+    }
   }
 
   @media (max-width: 768px) {
