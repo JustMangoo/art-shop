@@ -44,6 +44,7 @@ export default {
     return {
       showNavbar: true,
       lastScrollPosition: 0,
+      height: ''
     };
   },
   mounted() {
@@ -58,7 +59,7 @@ export default {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop;
 
-      if (currentScrollPosition < 0) {
+      if (currentScrollPosition < 100) {
         return;
       }
 
