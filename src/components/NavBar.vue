@@ -1,5 +1,5 @@
 <template>
-  <nav :class="{ 'navBar--hidden': !showNavbar }">
+  <nav ref="navBar" :class="{ 'navBar--hidden': !showNavbar }">
     <div class="containerTop">
       <div class="socials">
         <a href="https://www.facebook.com/profile.php?id=100007068168349"
@@ -49,6 +49,7 @@ export default {
   },
   mounted() {
     window.addEventListener("scroll", this.onScroll);
+    this.height = this.$refs.navBar.offsetHeight
   },
   beforeUnmount() {
     window.removeEventListener("scroll", this.onScroll);
@@ -59,7 +60,7 @@ export default {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop;
 
-      if (currentScrollPosition < 100) {
+      if (currentScrollPosition < this.height) {
         return;
       }
 
