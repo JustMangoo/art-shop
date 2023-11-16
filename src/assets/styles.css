@@ -73,6 +73,7 @@ h3 {
   margin-bottom: 1rem;
   font-size: 1.7rem;
   font-weight: 600;
+  color: var(--neutral-two);
   border-bottom: 2px solid var(--primary);
 }
 

@@ -16,6 +16,7 @@
 import Carousel from "./CarouselComp.vue";
 import Slide from "./SlideComp.vue";
 
+
 export default {
   components: { Carousel, Slide },
   setup() {

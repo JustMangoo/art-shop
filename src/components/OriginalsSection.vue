@@ -41,7 +41,7 @@ export default {};
         flex-wrap: wrap;
         background-color: var(--primary);
         border-radius: 0.2rem;
-        margin: 6rem 0;
+        margin: 8rem 0;
 
         .img-container{
           display: flex;
@@ -56,6 +56,7 @@ export default {};
             align-items: center;
             object-fit: cover;
             border-radius: 0.2rem;
+            box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.05);
           }
 
           .img1{
