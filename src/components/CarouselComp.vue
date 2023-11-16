@@ -6,10 +6,10 @@
   <!-- Navigation -->
   <div class="controls">
     <div class="toggle-page left">
-
+      <ion-icon @click="prevSlide" name="chevron-back-outline"></ion-icon>
     </div>
     <div class="toggle-page right">
-
+      <ion-icon @click="nextSlide" name="chevron-forward-outline"></ion-icon>
     </div>
   </div>
 

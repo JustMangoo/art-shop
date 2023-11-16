@@ -8,6 +8,7 @@
           <div>
             <input
               type="text"
+              name="name"
               v-model="form.name"
               placeholder="Vārds"
               required
@@ -16,6 +17,7 @@
           <div>
             <input
               type="email"
+              name="email"
               v-model="form.email"
               placeholder="Epasts"
               required
@@ -23,6 +25,7 @@
           </div>
           <div>
             <textarea
+              name="message"
               v-model="form.message"
               placeholder="Jūsu ziņa"
               required
@@ -116,7 +119,7 @@ footer {
   justify-content: center;
 
   .container {
-    width: 90%;
+    width: 70%;
     margin: auto;
     display: grid;
     grid-template-areas:
@@ -261,6 +264,12 @@ footer {
 
   .copyright {
     font-size: 0.9rem;
+  }
+
+  @media (max-width: 1200px) {
+    .container {
+      width: 95%;
+    } 
   }
 
   @media (max-width: 768px) {

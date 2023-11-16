@@ -1,12 +1,14 @@
 <template>
   <header>
-    <Carousel class="carousel" v-slot="{ currentSlide }">
-      <Slide v-for="(slide, index) in carouselSlides" :key="index">
-        <div v-show="currentSlide === index + 1" class="slide-info">
-          <img :src="require(`@/assets/images/${slide}.jpg`)" />
-        </div>
-      </Slide>
-    </Carousel>
+    <div class="test">
+      <Carousel v-slot="{ currentSlide }">
+        <Slide v-for="(slide, index) in carouselSlides" :key="index">
+          <div v-show="currentSlide === index + 1">
+            <img :src="require(`@/assets/images/${slide}.jpg`)" />
+          </div>
+        </Slide>
+      </Carousel>
+    </div>
   </header>
 </template>
 
@@ -30,12 +32,12 @@ header {
   position: relative;
   height: 65vh;
   user-select: none;
-  .carousel {
+  .test {
     position: relative;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    .slide-info {
+    div {
       position: absolute;
       top: 0;
       left: 0;
