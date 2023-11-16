@@ -1,10 +1,13 @@
 <template>
   <section class="originals">
     <h1>Oriģināls</h1>
-    <div class="container">
-      <img src="../assets/images/hero-1.jpg" alt="" class="left" />
-      <div class="accent"></div>
-      <img src="../assets/images/hero-2.jpg" alt="" class="right" />
+    <div class="grid">
+      <div id="left" class="container">
+        <img src="../assets/images/hero-1.jpg" alt=""/>
+      </div>
+      <div id="right" class="container">
+        <img src="../assets/images/hero-2.jpg" alt=""/>
+      </div>
     </div>
   </section>
 </template>
@@ -14,53 +17,45 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+
+#left {
+  grid-area: left;
+}
+#right {
+  grid-area: right;
+}
 .originals {
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
-
-  .container {
-    position: relative;
+  .grid {
     width: 80rem;
     max-width: 90%;
-    height: 50rem;
-    display: flex;
-    direction: row;
-    align-items: center;
-    justify-content: center;
-
-    .accent {
-      position: absolute;
-      width: 90%;
-      height: 30rem;
-      max-height: 90rem;
-      background-color: var(--primary);
-      border-radius: 0.2rem;
+    height: 40rem;
+    display: grid;
+    grid-template-areas:
+      "left right"
     }
-    img {
-      position: absolute;
-      z-index: 80;
-      object-fit: cover;
+    background-color: var(--primary);
+    border-radius: 0.2rem;
+    margin: 6rem 0;
+
+    .container{
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    img {
+      z-index: 80;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: cover;
+      height: 20rem;
       border-radius: 0.2rem;
     }
-
-    .left {
-      height: 65%;
-      left: 0;
-      top: 0;
-      aspect-ratio: 4 / 3;
-    }
-
-    .right {
-      height: 70%;
-      right: 9%;
-      bottom: 0;
-      aspect-ratio: 3 / 4;
-    }
   }
-}
+
 </style>

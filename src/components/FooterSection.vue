@@ -122,7 +122,7 @@ footer {
     grid-template-areas:
       "form contacts"
       "socials socials";
-  }
+    }
 
   .form,
   .contacts,
@@ -265,8 +265,11 @@ footer {
 
   @media (max-width: 768px) {
     .container {
-      flex-direction: column;
-      align-items: center;
+      display: grid;
+      grid-template-areas:
+      "form"
+      "contacts"
+      "socials";
     }
 
     .form,
