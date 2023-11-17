@@ -15,14 +15,13 @@
       <div class="logo">
         <img src="../assets/images/Logo placeholder.png" alt="" />
       </div>
-      <div class="languageCurrency">Latvia (EUR)</div>
     </div>
     <div class="containerBot">
       <div class="links">
         <a>Oriģināls</a>
         <a>Printēts</a>
         <a>Par mani</a>
-        <a>Pirkt</a>
+        <a>Veikals</a>
       </div>
       <div class="account-cart">
         <a
@@ -39,6 +38,7 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
