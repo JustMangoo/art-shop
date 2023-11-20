@@ -1,143 +1,38 @@
 <template>
-  <div class="carousel">
-    <slot :currentSlide="currentSlide" />
-  </div>
+  <Carousel :autoplay="2000" :wrap-around="true">
+    <Slide v-for="slide in 10" :key="slide">
+      <div class="carousel__item">{{ slide }}</div>
+    </Slide>
 
-  <!-- Navigation -->
-  <div class="controls">
-    <div class="toggle-page left">
-      <ion-icon @click="prevSlide" name="chevron-back-outline"></ion-icon>
-    </div>
-    <div class="toggle-page right">
-      <ion-icon @click="nextSlide" name="chevron-forward-outline"></ion-icon>
-    </div>
-  </div>
-
-  <!-- Pagination -->
-  <div class="pagination">
-    <span
-      @click="goToSlide(index)"
-      v-for="(slide, index) in getSlideCount"
-      :key="index"
-      :class="{ active: index + 1 === currentSlide }"
-    >
-    </span>
-  </div>
+    <template #addons>
+      <Pagination />
+    </template>
+  </Carousel>
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
+import { defineComponent } from "vue";
+import { Carousel, Pagination, Slide } from "vue3-carousel";
 
-export default {
-  setup() {
-    const currentSlide = ref(1);
-    const getSlideCount = ref(null);
-    const autoPlayEnabled = ref(true);
-    const timeoutDuration = ref(5000);
+import "vue3-carousel/dist/carousel.css";
 
-    //next slide
-    const nextSlide = () => {
-      if (currentSlide.value === getSlideCount.value) {
-        currentSlide.value = 1;
-        return;
-      }
-      currentSlide.value += 1;
-    };
-
-    //prev slide
-    const prevSlide = () => {
-      if (currentSlide.value === 1) {
-        currentSlide.value = getSlideCount.value;
-        return;
-      }
-      currentSlide.value -= 1;
-    };
-
-    const goToSlide = (index) => {
-      currentSlide.value = index + 1;
-    };
-
-    //auto play
-    const autoPlay = () => {
-      setInterval(() => {
-        nextSlide();
-      }, timeoutDuration.value);
-    };
-
-    if (autoPlayEnabled.value) {
-      autoPlay();
-    }
-    onMounted(() => {
-      getSlideCount.value = document.querySelectorAll(".slide").length;
-    });
-
-    return { currentSlide, nextSlide, prevSlide, getSlideCount, goToSlide };
+export default defineComponent({
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
   },
-};
+});
 </script>
 
-<style lang="scss">
-.controls {
-  padding: 0 1rem;
-  height: 100%;
-  width: 100%;
-  position: absolute;
+<style lang="scss" scoped>
+.carousel__item {
+  background-color: var(--secondary);
+  height: 65vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
-
-  .toggle-page {
-    display: flex;
-    flex: 1;
-  }
-
-  .right {
-    justify-content: flex-end;
-  }
-
-  ion-icon {
-    color: var(--neutral-one);
-    padding: 0.5rem;
-    background-color: var(--neutral-two);
-    opacity: 30%;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  ion-icon:hover {
-    opacity: 90%;
-  }
-}
-
-.pagination {
-  position: absolute;
-  bottom: 2rem;
-  width: 100%;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-  z-index: 11;
-
-  span {
-    cursor: pointer;
-    width: 0.8rem;
-    height: 0.8rem;
-    border: 2px solid var(--neutral-one);
-    border-radius: 50%;
-    box-shadow: 0px 0px 78px 0px rgba(0, 0, 0, 1);
-    opacity: 60%;
-  }
-
-  span:hover {
-    opacity: 90%;
-  }
-
-  .active {
-    background-color: var(--neutral-one);
-  }
+  object-fit: cover;
 }
 </style>

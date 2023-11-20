@@ -15,21 +15,27 @@
       <div class="logo">
         <img src="../assets/images/Logo placeholder.png" alt="" />
       </div>
+      <div class="languageCurrency">
+        <select>
+          <option selected>Latvia (EUR €)</option>
+          <option>United States (USD $)</option>
+        </select>
+      </div>
     </div>
     <div class="containerBot">
       <div class="links">
-        <a>Oriģināls</a>
-        <a>Printēts</a>
-        <a>Par mani</a>
-        <a>Veikals</a>
+        <router-link to="/">Sākums</router-link>
+        <router-link to="/originali">Oriģināli</router-link>
+        <router-link to="/printeti">Printēti</router-link>
+        <router-link to="/par-mani">Par Mani</router-link>
       </div>
       <div class="account-cart">
-        <a
-          ><p>Pieslēgties</p>
-          <ion-icon name="person-outline"></ion-icon
-        ></a>
-        <a
-          ><p>Grozs</p>
+        <a>
+          <router-link to="/login">Pieslēgties</router-link>
+          <ion-icon name="person-outline"></ion-icon>
+        </a>
+        <a>
+          <router-link to="/login">Grozs</router-link>
           <ion-icon name="bag-outline"></ion-icon
         ></a>
       </div>
@@ -38,7 +44,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -118,9 +123,27 @@ nav {
 
   .languageCurrency {
     flex: 2 0 0;
-    color: var(--neutral-one);
-    text-align: right;
-    justify-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+
+    select {
+      color: var(--neutral-one);
+      background-color: transparent;
+      text-align: right;
+      border: none;
+      outline: none;
+      border-radius: 4px;
+
+      option {
+        color: black;
+        border-radius: none;
+        border-radius: 4px;
+      }
+    }
+    select:focus {
+      border: none;
+      border-radius: 4px;
+    }
   }
 }
 .containerBot {

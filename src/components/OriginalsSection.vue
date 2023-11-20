@@ -2,15 +2,14 @@
   <section class="originals">
     <h1>Oriģināls</h1>
 
-      <div class="align">
-        <div id="left" class="img-container">
-          <img src="../assets/images/hero-1.jpg" alt="" class="img1"/>
-        </div>
-        <div id="right" class="img-container">
-          <img src="../assets/images/hero-2.jpg" alt="" class="img2"/>
-        </div>
+    <div class="align">
+      <div id="left" class="img-container">
+        <img src="../assets/images/hero-1.jpg" alt="" class="img1" />
       </div>
-
+      <div id="right" class="img-container">
+        <img src="../assets/images/hero-2.jpg" alt="" class="img2" />
+      </div>
+    </div>
   </section>
 </template>
 
@@ -19,7 +18,6 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-
 #left {
   grid-area: left;
 }
@@ -31,53 +29,52 @@ export default {};
   align-items: center;
   flex-direction: column;
   width: 100%;
-    .align {
-        width: 80rem;
-        height: 30%;
-        max-width:80%;
+  .align {
+    width: 80rem;
+    height: 30%;
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--secondary);
+    border-radius: 0.2rem;
+    margin: 8rem 0;
+
+    .img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: visible;
+
+      img {
+        z-index: 80;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        background-color: var(--primary);
+        object-fit: cover;
         border-radius: 0.2rem;
-        margin: 8rem 0;
-
-        .img-container{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          overflow: visible;
-
-          img {
-            z-index: 80;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            object-fit: cover;
-            border-radius: 0.2rem;
-            box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.05);
-          }
-
-          .img1{
-            height: 30rem;
-            aspect-ratio: 4/3;
-            transform: translate(-1.5rem, -7rem);
-          }
-          .img2{
-            width: 25rem;
-            aspect-ratio: 3/4;
-            transform: translate(1.5rem, 7rem);
-          }
-        }
+        box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.05);
       }
-  }
-  @media (max-width: 1200px) {
-    .grid {
-      grid-template-areas:
-        "left"
-        "right";
+
+      .img1 {
+        height: 30rem;
+        aspect-ratio: 4/3;
+        transform: translate(-1.5rem, -7rem);
+      }
+      .img2 {
+        width: 25rem;
+        aspect-ratio: 3/4;
+        transform: translate(1.5rem, 7rem);
+      }
     }
   }
-
+}
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-areas:
+      "left"
+      "right";
+  }
+}
 </style>

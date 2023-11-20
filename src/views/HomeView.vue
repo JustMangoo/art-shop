@@ -1,31 +1,29 @@
 <template>
   <div class="home">
-    <Navigation />
-    <Hero />
+    <Carousel />
     <Originals />
+    <Scroller />
     <Banner>
-      <img class="banner-img" src="../assets/images/hero-3.jpg" alt="">
+      <img class="banner-img" src="../assets/images/hero-3.jpg" alt="" />
     </Banner>
-    <Footer />
   </div>
 </template>
 
 <script>
-import Navigation from "../components/NavBar.vue";
-import Hero from "../components/HeroSection.vue";
+import Carousel from "../components/CarouselComp.vue";
 import Originals from "../components/OriginalsSection.vue";
-import Footer from "../components/FooterSection.vue";
-import Banner from "../components/BannerComp.vue"
+import Banner from "../components/BannerComp.vue";
+import Scroller from "../components/ScrollerComp.vue";
 
 export default {
   name: "HomeView",
-  components: { Navigation, Hero, Originals, Footer, Banner },
+  components: { Carousel, Originals, Banner, Scroller },
 };
 </script>
 
 <style>
-  .banner-img {
-    width: 100%;
-    object-fit: cover;
-  }
+.banner-img {
+  width: 100%;
+  object-fit: cover;
+}
 </style>
