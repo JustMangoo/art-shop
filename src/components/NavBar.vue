@@ -24,7 +24,7 @@
     </div>
     <div class="containerBot">
       <div class="links">
-        <router-link to="/">Sākums</router-link>
+        <router-link to="/">Sākums 123</router-link>
         <router-link to="/originali">Oriģināli</router-link>
         <router-link to="/printeti">Printēti</router-link>
         <router-link to="/par-mani">Par Mani</router-link>
