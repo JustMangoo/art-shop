@@ -10,12 +10,11 @@ export default {};
 
 <style lang="scss" scoped>
 section {
-  margin: 1rem 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 70vh;
   overflow: hidden;
 }
 </style>

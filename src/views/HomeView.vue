@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <Carousel />
-    <Originals />
     <Scroller />
     <Banner>
       <img class="banner-img" src="../assets/images/hero-3.jpg" alt="" />
@@ -11,13 +10,12 @@
 
 <script>
 import Carousel from "../components/CarouselComp.vue";
-import Originals from "../components/OriginalsSection.vue";
 import Banner from "../components/BannerComp.vue";
 import Scroller from "../components/ScrollerComp.vue";
 
 export default {
   name: "HomeView",
-  components: { Carousel, Originals, Banner, Scroller },
+  components: { Carousel, Banner, Scroller },
 };
 </script>
 

@@ -58,13 +58,13 @@
       <div class="socials">
         <h3>Sociālie tīkli</h3>
         <div class="links">
-          <a href="https://instagram.com" target="_blank"
+          <a class="icon" href="https://instagram.com" target="_blank"
             ><ion-icon name="logo-instagram"></ion-icon
           ></a>
-          <a href="https://tiktok.com" target="_blank"
+          <a class="icon" href="https://tiktok.com" target="_blank"
             ><ion-icon name="logo-tiktok"></ion-icon
           ></a>
-          <a href="https://facebook.com" target="_blank"
+          <a class="icon" href="https://facebook.com" target="_blank"
             ><ion-icon name="logo-facebook"></ion-icon
           ></a>
         </div>
@@ -125,7 +125,7 @@ footer {
     grid-template-areas:
       "form contacts"
       "socials socials";
-    }
+  }
 
   .form,
   .contacts,
@@ -269,16 +269,16 @@ footer {
   @media (max-width: 1200px) {
     .container {
       width: 95%;
-    } 
+    }
   }
 
   @media (max-width: 768px) {
     .container {
       display: grid;
       grid-template-areas:
-      "form"
-      "contacts"
-      "socials";
+        "form"
+        "contacts"
+        "socials";
     }
 
     .form,

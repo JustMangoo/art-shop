@@ -2,13 +2,15 @@
   <nav ref="navBar" :class="{ 'navBar--hidden': !showNavbar }">
     <div class="containerTop">
       <div class="socials">
-        <a href="https://www.facebook.com/profile.php?id=100007068168349"
+        <a
+          class="icon"
+          href="https://www.facebook.com/profile.php?id=100007068168349"
           ><ion-icon name="logo-facebook"></ion-icon>
         </a>
-        <a href="https://www.instagram.com/artis.daugats.art/"
+        <a class="icon" href="https://www.instagram.com/artis.daugats.art/"
           ><ion-icon name="logo-tiktok"></ion-icon>
         </a>
-        <a href="https://www.instagram.com/artis.daugats.art/"
+        <a class="icon" href="https://www.instagram.com/artis.daugats.art/"
           ><ion-icon name="logo-instagram"></ion-icon>
         </a>
       </div>
@@ -65,7 +67,7 @@ export default {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop;
 
-      if (currentScrollPosition < this.height) {
+      if (currentScrollPosition <= this.height) {
         return;
       }
 
@@ -81,6 +83,7 @@ export default {
 <style lang="scss" scoped>
 nav {
   width: 100%;
+  height: 7rem;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
@@ -96,89 +99,93 @@ nav {
     font-weight: 500;
     padding: 0.5rem 3rem;
     width: 100%;
-  }
+    height: 30%;
 
-  .socials {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    justify-self: center;
-    gap: 1rem;
-    flex: 2 0 0;
-    color: var(--neutral-one);
-  }
-
-  .logo {
-    height: 3rem;
-    flex: 1 1 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      height: 100%;
-    }
-  }
-
-  .languageCurrency {
-    flex: 2 0 0;
-    display: flex;
-    justify-content: flex-end;
-
-    select {
+    .socials {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: left;
+      justify-self: center;
+      gap: 1rem;
+      flex: 2 0 0;
       color: var(--neutral-one);
-      background-color: transparent;
-      text-align: right;
-      border: none;
-      outline: none;
-      border-radius: 4px;
+    }
 
-      option {
-        color: black;
-        border-radius: none;
+    .logo {
+      height: 100%;
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .languageCurrency {
+      flex: 2 0 0;
+      display: flex;
+      justify-content: flex-end;
+
+      select {
+        color: var(--neutral-one);
+        background-color: transparent;
+        text-align: right;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+
+        option {
+          color: black;
+          border-radius: none;
+          border-radius: 4px;
+        }
+      }
+      select:focus {
+        border: none;
         border-radius: 4px;
       }
     }
-    select:focus {
-      border: none;
-      border-radius: 4px;
+  }
+
+  .containerBot {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    width: 100%;
+    height: 70%;
+    .links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
     }
-  }
-}
-.containerBot {
-  background-color: var(--secondary);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 3rem;
-  width: 100%;
-  .links {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
 
-  .account-cart {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-  }
+    .account-cart {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
 
-  .account-cart a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0.2rem;
-    color: var(--neutral-two);
+    .account-cart a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 0.2rem;
+      color: var(--neutral-two);
 
-    ion-icon {
-      --ionicon-stroke-width: 2rem;
+      ion-icon {
+        --ionicon-stroke-width: 2rem;
+      }
     }
   }
 }
