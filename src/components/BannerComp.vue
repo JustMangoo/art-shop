@@ -14,7 +14,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 50vh;
   overflow: hidden;
 }
 </style>

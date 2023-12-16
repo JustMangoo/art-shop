@@ -2,8 +2,18 @@
   <div class="login-container">
     <h1>Pieslēgties</h1>
     <form class="login-form">
-      <input type="text" id="username" placeholder="Lietotājvārds" />
-      <input type="password" id="password" placeholder="Parole" />
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Lietotājvārds"
+      />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Parole"
+      />
       <button type="submit" class="login">Pieslēgties</button>
       <p>Nav konta? <a href="">Izveido to</a></p>
     </form>
@@ -54,6 +64,10 @@ export default {
         outline: none;
         border-color: var(--primary);
       }
+    }
+
+    a {
+      text-decoration: underline;
     }
 
     .login {
