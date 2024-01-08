@@ -1,10 +1,26 @@
 <template>
   <div class="home">
-    <Carousel />
+    <Carousel class="mb-3rem" />
+    <div class="title">
+      <h1>Oriģināli</h1>
+    </div>
     <Scroller />
+
     <Banner>
       <img class="banner-img" src="../assets/images/hero-3.jpg" alt="" />
     </Banner>
+
+    <div class="title">
+      <h1>Printēti</h1>
+    </div>
+    <Scroller />
+
+    <Banner>
+      <img class="banner-img" src="../assets/images/hero-3.jpg" alt="" />
+    </Banner>
+    <div class="title">
+      <h1>Par Mani</h1>
+    </div>
   </div>
 </template>
 
@@ -19,9 +35,16 @@ export default {
 };
 </script>
 
-<style>
-.banner-img {
-  width: 100%;
-  object-fit: cover;
+<style lang="scss" scoped>
+.home {
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-img {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 </style>

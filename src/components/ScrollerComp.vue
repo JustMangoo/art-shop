@@ -22,7 +22,7 @@ export default defineComponent({
   data: () => ({
     // carousel settings
     settings: {
-      itemsToShow: 1,
+      itemsToShow: 1.5,
       snapAlign: "center",
     },
     // breakpoints are mobile first
@@ -49,7 +49,7 @@ export default defineComponent({
   .carousel__item {
     background-color: var(--secondary);
     width: 95%;
-    height: 25rem;
+    aspect-ratio: 3 / 4;
     display: flex;
     justify-content: center;
     align-items: center;

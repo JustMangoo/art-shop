@@ -1,21 +1,39 @@
 <template>
   <div class="login-container">
-    <h1>Pieslēgties</h1>
+    <h1>Reģistrēšanās</h1>
     <form class="login-form">
       <input
-        type="text"
-        id="username"
-        name="username"
-        placeholder="Lietotājvārds"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Ē-pasta adrese"
+      />
+      <input type="text" id="name" name="name" placeholder="Vārds" />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Izveido paroli"
       />
       <input
         type="password"
         id="password"
         name="password"
-        placeholder="Parole"
+        placeholder="Apstiprini paroli"
       />
-      <button type="submit" class="login">Pieslēgties</button>
-      <p>Nav konta? <router-link to="/signup">Izveido to</router-link></p>
+      <div class="checkbox-container">
+        <input
+          type="checkbox"
+          name="newsletter-checkbox"
+          id="newsletter-checkbox"
+          value="newsletter-checkbox"
+        />
+        <label for="newsletter-checkbox">Vēlos saņemt jaunumus ē-pastā</label>
+      </div>
+      <button type="submit" class="login">Reģistrējies</button>
+      <p>
+        Tev jau ir konts? <router-link to="/login">Pieslēgties</router-link>
+      </p>
     </form>
   </div>
 </template>
@@ -63,6 +81,16 @@ export default {
       &:focus {
         outline: none;
         border-color: var(--primary);
+      }
+    }
+
+    .checkbox-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+
+      input {
+        width: fit-content;
       }
     }
 

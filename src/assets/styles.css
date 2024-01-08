@@ -106,3 +106,7 @@ a {
   margin: 0;
   color: inherit;
 }
+
+.mb-3rem {
+  margin-bottom: 3rem;
+}
